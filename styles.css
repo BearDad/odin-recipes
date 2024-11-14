@@ -27,6 +27,9 @@ body {
   height: 100%; /* Ensures both html and body take up the full viewport height */
   margin: 0; /* Removes default margin */
   padding: 0; /* Removes default padding */
+
+  padding-top: 50px;
+
 }
 
 body {
@@ -37,50 +40,51 @@ body {
   color: white;
 }
 
-#recipes {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-}
-
-#header {
-  margin: 0;
-  padding: 0;
-}
-#header h1 {
-  display: block;
-  margin: 0 auto;
-  text-align: center;
-  font-size: 64px;
-  background-color: #4f6272;
-
-  border: 5px solid transparent; /* Set border color and thickness */
-}
 
 img {
   display: block;
   margin: 25px auto;
-  max-width: 1060px;
+  max-width: 95%;
   max-height: 700px;
-  height: 700px;
+  height: auto;
+
   width: auto;
   border: 5px solid transparent; /* Set border color and thickness */
   border-radius: 30px; /* Rounded corners */
 }
 
+
+#recipes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+}
+@media (min-width: 800px) {
+  #recipes {
+    gap: 10px; /* Sets a maximum gap */
+  }
+}
+
 .recipes button {
   font-family: "Special Elite", sans-serif;
+  justify-content: center;
+
   color: black;
   background-color: #7ca29c;
   text-align: center;
   font-size: 24px;
-  width: 300px;
+
+  width: auto;
   border: 5px solid transparent;
-  padding: 15px;
+  padding: 12px;
   border-radius: 20px;
-  margin: 25px auto;
+  margin: 0px auto;
   cursor: pointer;
+  flex: 1 1 0;
+  transform: scale(auto);
+
   transition:
     background-color 0.3s ease-out,
     border-color 1s ease-out,
@@ -92,14 +96,47 @@ img {
   transform: scale(1.1);
   border-color: #445f5b;
 }
-h2 {
-  font-size: 32px;
+
+#header {
+  margin: 0;
+  padding: 0;
+  position: fixed;
   text-align: center;
+  width: 100%;
+  top: 0;
+  background-color: #4f6272;
+  padding: 10px 0;
+  z-index: 10;
 }
-p {
+#header h1 {
+  margin: 0;
+  font-size: clamp(32px, 4vw, 128px);
+  text-align: center;
+  color: white;
+}
+.paragraph {
   font-family: "Special Elite", sans-serif;
-  font-size: 24px;
-  text-align: justify;
+  text-align: center;
+  font-size: clamp(12px, 3vw, 64px);
+}
+#description {
   margin: 0 auto;
   padding: 25px;
+  align-content: center;
+  flex-wrap: wrap;
+}
+h2 {
+  font-size: clamp(32px, 4vw, 128px);
+  text-align: center;
+}
+.list {
+  display: flex;
+  font-family: "Special Elite", sans-serif;
+  font-size: clamp(12px, 3vw, 64px);
+  text-align: justify;
+  padding: 25px;
+  align-content: center;
+  justify-content: left;
+  flex-wrap: wrap;
+
 }
