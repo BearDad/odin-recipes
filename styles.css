@@ -27,7 +27,9 @@ body {
   height: 100%; /* Ensures both html and body take up the full viewport height */
   margin: 0; /* Removes default margin */
   padding: 0; /* Removes default padding */
+
   padding-top: 50px;
+
 }
 
 body {
@@ -38,16 +40,19 @@ body {
   color: white;
 }
 
+
 img {
   display: block;
   margin: 25px auto;
   max-width: 95%;
   max-height: 700px;
   height: auto;
+
   width: auto;
   border: 5px solid transparent; /* Set border color and thickness */
   border-radius: 30px; /* Rounded corners */
 }
+
 
 #recipes {
   display: flex;
@@ -65,10 +70,12 @@ img {
 .recipes button {
   font-family: "Special Elite", sans-serif;
   justify-content: center;
+
   color: black;
   background-color: #7ca29c;
   text-align: center;
   font-size: 24px;
+
   width: auto;
   border: 5px solid transparent;
   padding: 12px;
@@ -77,6 +84,7 @@ img {
   cursor: pointer;
   flex: 1 1 0;
   transform: scale(auto);
+
   transition:
     background-color 0.3s ease-out,
     border-color 1s ease-out,
@@ -130,4 +138,5 @@ h2 {
   align-content: center;
   justify-content: left;
   flex-wrap: wrap;
+
 }
