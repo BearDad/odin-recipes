@@ -8,12 +8,16 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-
-    "vite": "^5.4.11"
-
+    "vite": "^5.4.21"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "sass": "^1.97.2"
+  },
+  "trustedDependencies": [
+    "@parcel/watcher"
+  ]
 }
